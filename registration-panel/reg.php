@@ -4,15 +4,16 @@
     $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
     $dotenv->load();
     $conn = mysqli_connect(
-        $_ENV['DB_HOST'],
-        $_ENV['DB_USER'],
-        $_ENV['DB_PASS'],
-        $_ENV['DB_NAME']
+        $_ENV['DB_host'],
+        $_ENV['DB_user'],
+        $_ENV['DB_pass'],
+        $_ENV['DB_name']
     );
 
     if (!$conn) {
-        die('Błąd połączenia z bazą danych');
+        die('error database is not connected');
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -20,12 +21,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Better-Chess-rejestracja</title>
-    <link rel="stylesheet" href="/registration-panel/style_reg.css">
-    <link rel="icon" href="/image/Better-Chess-icon.png">
+    <link rel="stylesheet" href="/style_reg.css">
+    <link rel="icon" type="image/png" href="../image/Better-Chess-icon.png">
 </head>
 <body>
     <header>
-        <img id="img1" src="/image/Better-Chess-icon.png" alt="Better-Chess-icon" width="50px" height="50px">
+        <img id="img1" src="../image/Better-Chess-icon.png" alt="Better-Chess-icon" width="50px" height="50px">
         <p id="p1">
             <em><span id="span1">Quality over Quantity =</span><strong><span id="span2"> Better-Chess</span></strong></em>
         </p>
@@ -46,9 +47,10 @@
                 <input type="password" id="pass2" name="pass2_reg" required><br>
                 <br><br><br>
 
-                <button type="reset" id="reset2" class="b">Wyczyść dane</button>
-                <button type="submit" id="submit2" class="b" onclick="pop_up()">Wyślij dane</button>
+                <button type="reset" value="reset" id="reset2" class="b">Wyczyść dane</button>
+                <button type="button" id="submit2" class="b" onclick="pop_up()">Wyślij dane</button>
                 <button type="button" id="panel1_2" class="b" onclick="main_page()">Strona główna</button>
+                <p id=announce"></p>
             </form>
         </div>
     </main>
