@@ -19,10 +19,14 @@ nav{
 main{
     background-color: rgb(230, 230, 230);
     width: 1570px;
-    height: 800px;
+    height: 1100px;
     position: relative;
     bottom: 750px;
     left: 240px;
+}
+#section-content{
+    width: 1500px;
+    height: 900px;
 }
 /*Elements*/
 /*header*/
@@ -68,4 +72,17 @@ main{
 }
 #div1{
     text-align: center;
+}
+.blocks{
+    width: 400px;
+    height: 200px;
+}
+#div2,#div5,#div8{
+    background-color: red;
+}
+#div3,#div6,#div9{
+    background-color: yellow;
+}
+#div4,#div7,#div10{
+    background-color: aquamarine;
 }
