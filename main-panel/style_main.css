@@ -73,16 +73,54 @@ main{
 #div1{
     text-align: center;
 }
+/*main-content*/
 .blocks{
     width: 400px;
     height: 200px;
+    position: relative;
 }
-#div2,#div5,#div8{
+.red{
     background-color: red;
 }
-#div3,#div6,#div9{
+.yellow{
     background-color: yellow;
 }
-#div4,#div7,#div10{
+.green{
     background-color: aquamarine;
+}
+.l100{
+    left:100px;
+}
+.l550{
+    left: 550px;
+}
+.l1000{
+    left: 1000px;
+}
+#div2{
+    top: 50px;
+}
+#div3{
+    bottom: 150px;
+}
+#div4{
+    bottom: 350px;
+}
+#div5{
+    bottom: 300px;
+}
+#div6{
+    bottom: 500px;
+}
+#div7{
+    bottom: 700px;
+}
+#div8{
+    bottom: 650px;
+}
+#div10{
+    bottom: 1050px;
+}
+#div9{
+    bottom: 850px;
 }
